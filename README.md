@@ -70,9 +70,9 @@ $ shotgun
 
 Video Coming Soon.
 
-### How does a nice looking spec look like?
+### How does a nice-looking spec look like?
 
-Image Coming Soon.
+<img width="2374" height="2188" alt="ScreenShot 2025-08-05 at 21 13" src="https://github.com/user-attachments/assets/b5f3aed9-7239-4680-a82a-3bc718d27891" />
 
 ---
 
