@@ -55,7 +55,7 @@ Follow these steps to get your local Shotgun development environment up and runn
 Paste this into your command line:
 
 ```
-$ sh -c "$(curl -fsSL https://gist.github.com/michalcymbalista/f08cb9fa7229e9307e83259de8efa65c/raw)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/shotgun-sh/shotgun-alpha/refs/heads/main/install.sh)"
 ```
 
 ---
