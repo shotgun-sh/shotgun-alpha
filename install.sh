@@ -24,6 +24,39 @@ if ! command_exists node; then
         # Source nvm for current session (in lieu of restarting the shell)
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        
+        # Ensure nvm is added to shell profiles for persistent access
+        echo "Adding nvm to shell profiles for persistent access..."
+        NVM_PROFILE_CONTENT='
+# NVM configuration
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion'
+        
+        # Add to .bashrc if it exists or is the default shell
+        if [ -f "$HOME/.bashrc" ] || [[ "$SHELL" == *"bash"* ]]; then
+            if ! grep -q "NVM_DIR" "$HOME/.bashrc" 2>/dev/null; then
+                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.bashrc"
+                echo "Added nvm to .bashrc"
+            fi
+        fi
+        
+        # Add to .zshrc if it exists or is the default shell
+        if [ -f "$HOME/.zshrc" ] || [[ "$SHELL" == *"zsh"* ]]; then
+            if ! grep -q "NVM_DIR" "$HOME/.zshrc" 2>/dev/null; then
+                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.zshrc"
+                echo "Added nvm to .zshrc"
+            fi
+        fi
+        
+        # Add to .profile as fallback
+        if [ -f "$HOME/.profile" ]; then
+            if ! grep -q "NVM_DIR" "$HOME/.profile" 2>/dev/null; then
+                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.profile"
+                echo "Added nvm to .profile"
+            fi
+        fi
+        
     else
         echo "nvm already installed, sourcing..."
         export NVM_DIR="$HOME/.nvm"
@@ -34,6 +67,10 @@ if ! command_exists node; then
     echo "Installing Node.js 22..."
     nvm install 22
     nvm use 22
+    
+    # Set Node.js 22 as the default version for new shell sessions
+    echo "Setting Node.js 22 as default version..."
+    nvm alias default 22
     
     echo "Node.js $(node --version) and npm $(npm --version) installed successfully!"
 elif ! command_exists npm; then
@@ -106,4 +143,30 @@ npm install -g @proofs-io/shotgun@dev --force
 npm install -g @proofs-io/shotgun-server@dev --force
 
 echo "Installation complete!"
+
+# Final verification and user instructions
+echo ""
+echo "=== Installation Summary ==="
+if command_exists node; then
+    echo "✓ Node.js: $(node --version)"
+fi
+if command_exists npm; then
+    echo "✓ npm: $(npm --version)"  
+fi
+if command_exists shotgun; then
+    echo "✓ shotgun CLI is available"
+else
+    echo "⚠ shotgun CLI installation may need a shell restart"
+fi
+if command_exists shotgund; then
+    echo "✓ shotgund server is available"
+else 
+    echo "⚠ shotgund server installation may need a shell restart"
+fi
+
+echo ""
+echo "If nvm/node/npm are not immediately available, please restart your shell or run:"
+echo "  source ~/.bashrc   (for bash users)"
+echo "  source ~/.zshrc    (for zsh users)"
+echo ""
 echo "You can now use 'shotgun' command globally."
