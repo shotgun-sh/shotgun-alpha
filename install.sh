@@ -19,41 +19,48 @@ if ! command_exists node; then
     # Check if nvm is already installed
     if ! command_exists nvm && [ ! -s "$HOME/.nvm/nvm.sh" ]; then
         echo "Installing nvm..."
+        
+        # Install nvm
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
         
-        # Source nvm for current session (in lieu of restarting the shell)
+        # Source nvm for current session
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
         
-        # Ensure nvm is added to shell profiles for persistent access
-        echo "Adding nvm to shell profiles for persistent access..."
+        # Manually add nvm to shell profiles since the installer may not work reliably
+        echo "Adding nvm to shell profiles..."
         NVM_PROFILE_CONTENT='
-# NVM configuration
+# NVM configuration added by shotgun installer
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion'
         
-        # Add to .bashrc if it exists or is the default shell
-        if [ -f "$HOME/.bashrc" ] || [[ "$SHELL" == *"bash"* ]]; then
-            if ! grep -q "NVM_DIR" "$HOME/.bashrc" 2>/dev/null; then
-                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.bashrc"
-                echo "Added nvm to .bashrc"
-            fi
+        # Always add to .profile as universal fallback
+        if ! grep -q "NVM_DIR.*nvm.sh" "$HOME/.profile" 2>/dev/null; then
+            echo "$NVM_PROFILE_CONTENT" >> "$HOME/.profile"
+            echo "Added nvm to .profile"
+        else
+            echo "nvm already configured in .profile"
         fi
         
-        # Add to .zshrc if it exists or is the default shell
-        if [ -f "$HOME/.zshrc" ] || [[ "$SHELL" == *"zsh"* ]]; then
-            if ! grep -q "NVM_DIR" "$HOME/.zshrc" 2>/dev/null; then
+        # Add to shell-specific profiles
+        if [[ "$SHELL" == *"zsh"* ]] || [ -f "$HOME/.zshrc" ]; then
+            if ! grep -q "NVM_DIR.*nvm.sh" "$HOME/.zshrc" 2>/dev/null; then
+                touch "$HOME/.zshrc"
                 echo "$NVM_PROFILE_CONTENT" >> "$HOME/.zshrc"
                 echo "Added nvm to .zshrc"
+            else
+                echo "nvm already configured in .zshrc"
             fi
         fi
         
-        # Add to .profile as fallback
-        if [ -f "$HOME/.profile" ]; then
-            if ! grep -q "NVM_DIR" "$HOME/.profile" 2>/dev/null; then
-                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.profile"
-                echo "Added nvm to .profile"
+        if [[ "$SHELL" == *"bash"* ]] || [ -f "$HOME/.bashrc" ]; then
+            if ! grep -q "NVM_DIR.*nvm.sh" "$HOME/.bashrc" 2>/dev/null; then
+                touch "$HOME/.bashrc"
+                echo "$NVM_PROFILE_CONTENT" >> "$HOME/.bashrc"
+                echo "Added nvm to .bashrc"
+            else
+                echo "nvm already configured in .bashrc"
             fi
         fi
         
@@ -61,6 +68,16 @@ export NVM_DIR="$HOME/.nvm"
         echo "nvm already installed, sourcing..."
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    fi
+    
+    # Verify nvm is working before proceeding
+    if ! command_exists nvm; then
+        echo "ERROR: nvm is still not available after installation attempts."
+        echo "Please try running the following manually:"
+        echo "  export NVM_DIR=\"\$HOME/.nvm\""  
+        echo "  [ -s \"\$NVM_DIR/nvm.sh\" ] && \\. \"\$NVM_DIR/nvm.sh\""
+        echo "  nvm install 22"
+        exit 1
     fi
     
     # Install Node.js 22
@@ -165,8 +182,8 @@ else
 fi
 
 echo ""
-echo "If nvm/node/npm are not immediately available, please restart your shell or run:"
+echo "You can now use 'shotgun' command globally."
+echo "If it's not immediately available, please restart your shell or run:"
 echo "  source ~/.bashrc   (for bash users)"
 echo "  source ~/.zshrc    (for zsh users)"
 echo ""
-echo "You can now use 'shotgun' command globally."
