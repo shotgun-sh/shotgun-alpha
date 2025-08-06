@@ -45,9 +45,11 @@ fi
 
 echo "Installing @proofs-io/shotgun globally..."
 
-# Install the packages globally
-npm install -g @proofs-io/shotgun@dev
-npm install -g @proofs-io/shotgun-server@dev
+
+npm uninstall -g @proofs-io/shotgun@dev
+npm uninstall -g @proofs-io/shotgun-server@dev
+npm install -g @proofs-io/shotgun@dev --force --no-cache
+npm install -g @proofs-io/shotgun-server@dev --force --no-cache
 
 echo "Installation complete!"
 echo "You can now use 'shotgun' command globally."
