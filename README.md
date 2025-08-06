@@ -60,10 +60,17 @@ sh -c "$(curl -fsSL https://install.shotgun.sh/install.sh)"
 
 ---
 
-After installation, start shotgun with:
+After installation, start Shotgun with:
 
 ```jsx
 $ shotgun
+```
+
+---
+To uninstall Shotgun:
+
+```
+npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 ```
 
 ## **🎯 See in Action**
@@ -72,7 +79,7 @@ Video Coming Soon.
 
 ### How does a nice-looking spec look like?
 
-<img width="2374" height="2188" alt="ScreenShot 2025-08-05 at 21 13" src="https://github.com/user-attachments/assets/b5f3aed9-7239-4680-a82a-3bc718d27891" />
+Coming Soon.
 
 ---
 
