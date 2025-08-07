@@ -75,11 +75,7 @@ npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 
 ## **🎯 See in Action**
 
-Video Coming Soon.
-
-### How does a nice-looking spec look like?
-
-Coming Soon.
+[![Watch on YouTube](https://img.youtube.com/vi/B-UW2GCMK3M/0.jpg)](https://www.youtube.com/watch?v=B-UW2GCMK3M)
 
 ---
 
