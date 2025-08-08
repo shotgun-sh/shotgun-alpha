@@ -153,11 +153,11 @@ else
     echo "UV is already available"
 fi
 
-npm uninstall -g @proofs-io/shotgun@dev
-npm uninstall -g @proofs-io/shotgun-server@dev
+npm uninstall -g @proofs-io/shotgun
+npm uninstall -g @proofs-io/shotgun-server
 npm cache clean --force
-npm install -g @proofs-io/shotgun@dev --force
-npm install -g @proofs-io/shotgun-server@dev --force
+npm install -g @proofs-io/shotgun --force
+npm install -g @proofs-io/shotgun-server --force
 
 echo "Installation complete!"
 
