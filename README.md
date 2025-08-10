@@ -77,6 +77,8 @@ npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 
 [![Watch on YouTube](https://img.youtube.com/vi/B-UW2GCMK3M/0.jpg)](https://www.youtube.com/watch?v=B-UW2GCMK3M)
 
+**Discord: you can leave feedback and talk to us [here](https://discord.gg/5RmY6J2N7s).**
+
 ---
 
 ## **📸 What You Can Try**
@@ -121,7 +123,7 @@ Analyze the impact of each solution on developer hardware requirements and netwo
 
 </aside>
 
-**Project: Build a new, customer-facing data analytics dashboard that can handle complex queries without impacting the performance of the main application.**
+
 
 <aside>
 
@@ -130,6 +132,7 @@ Investigate data warehousing and ETL strategies (e.g., using a read replica, mat
 Research security models and best practices for presenting multi-tenant data visualizations to ensure no data leakage.
 
 </aside>
+
 
 ---
 
