@@ -135,6 +135,10 @@ Research security models and best practices for presenting multi-tenant data vis
 
 
 ---
+## FAQ
+**Does Shotgun collect any stats or data when I use it?**  
+We only gather minimal, anonymous events — like when Shotgun is installed or when a tool is called. We don’t collect the content itself, only that the event happened. We also use Sentry to capture errors so we can improve stability.
+---
 
 ## ✉️ Let Us Know What You Think!
 
