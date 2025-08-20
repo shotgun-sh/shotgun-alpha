@@ -75,7 +75,7 @@ npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 
 ## **🎯 See in Action**
 
-[![Watch on YouTube](https://img.youtube.com/vi/B-UW2GCMK3M/0.jpg)](https://www.youtube.com/watch?v=B-UW2GCMK3M)
+[![Watch on YouTube](https://img.youtube.com/vi/B-UW2GCMK3M/0.jpg)](https://youtu.be/SZV_xzg1RCQ)
 
 **Discord: you can leave feedback and talk to us [here](https://discord.gg/5RmY6J2N7s).**
 
