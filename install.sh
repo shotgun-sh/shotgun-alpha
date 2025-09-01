@@ -12,9 +12,28 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-# Check if Node.js and npm are installed
-if ! command_exists node; then
-    echo "Node.js not found. Installing Node.js via nvm..."
+# Function to get Node.js major version
+get_node_major_version() {
+    if command_exists node; then
+        node -v | sed 's/v//' | cut -d. -f1
+    else
+        echo "0"
+    fi
+}
+
+# Function to check if Node.js version is 20 or higher
+is_node_version_adequate() {
+    local version=$(get_node_major_version)
+    [ "$version" -ge 20 ] 2>/dev/null
+}
+
+# Check if Node.js is installed and has adequate version (20+)
+if ! command_exists node || ! is_node_version_adequate; then
+    if command_exists node; then
+        echo "Node.js $(node --version) found, but version 20+ is required. Installing Node.js 22..."
+    else
+        echo "Node.js not found. Installing Node.js 22..."
+    fi
     
     # Check if nvm is already installed
     if ! command_exists nvm && [ ! -s "$HOME/.nvm/nvm.sh" ]; then
