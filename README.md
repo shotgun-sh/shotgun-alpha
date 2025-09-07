@@ -32,7 +32,7 @@
 sh -c "$(curl -fsSL https://install.shotgun.sh/install.sh)"
 ```
 
-<img width="600" height="200" alt="Screenshot 2025-08-25 at 4 40 37 PM" src="https://github.com/user-attachments/assets/e9d15ea2-347e-4639-9e62-5d6a4edb47df" />
+<img width="600" height="200" alt="Screenshot 2025-08-25 at 4 40 37 PM" src="image.png" />
 
 <br>
 
@@ -93,7 +93,7 @@ npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 
 <p align="center">
   <a href="https://youtu.be/ex95q0uVkDk">
-    <img src="https://github.com/user-attachments/assets/ed7fe107-f60d-4f8f-aada-ab21b6008fbb" alt="Watch the Shotgun demo" width="720">
+    <img src="https://img.youtube.com/vi/ex95q0uVkDk/0.jpg" alt="Watch the Shotgun demo" width="720">
   </a>
 </p>
 
