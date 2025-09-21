@@ -47,6 +47,7 @@ Your AI posse for researching, planning & building software. Repo-aware, multi-a
   <ol style="line-height:1.9; margin:0; padding-left:20px;">
     <li><a href="#quickstart">Quickstart</a></li>
     <li><a href="#demo">Demo</a></li>
+	<li><a href="#codebase-understanding">Codebase Understanding</a></li>
     <li><a href="#prompts">Try these prompts</a></li>
     <li><a href="#why">Why Shotgun</a></li>
     <li><a href="#capabilities">Key capabilities</a></li>
@@ -91,6 +92,7 @@ npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server
 
 **Spec → Code:** Shotgun performs multi-agent research and produces specs. You export files formatted for your coding agents and keep everything local until you choose to share.
 
+
 <p align="center">
   <a href="https://youtu.be/ex95q0uVkDk">
     <img src="https://github.com/user-attachments/assets/ed7fe107-f60d-4f8f-aada-ab21b6008fbb" alt="Watch the Shotgun demo" width="720">
@@ -103,6 +105,30 @@ I want to build an AI-powered ‘Tinder for Side Hustles.’ Right now it’s ju
 Walk me step by step into shaping it into a concrete business plan
 ```
 ➡️ [View artifact](https://artifacts.shotgun.sh/657147be-52a1-48d6-8028-90b3a59adbbd/42dc89af-473e-44d7-b628-2dac55161b53/index.md)
+
+---
+
+<h2 id="codebase-understanding">Codebase Understanding 🚀</h2>
+
+Shotgun can now index and understand your entire codebase (in Python, Typescript and Javascript).
+This unlocks research, specs, and planning directly in the context of your repo.
+
+<h3>Command</h3>
+
+```bash 
+/codebase add [path to your codebase]
+```
+<p align="center">
+  <a href="https://youtu.be/cy1A6Kwt8J8">
+    <img src="https://github.com/user-attachments/assets/02ade71b-cc5f-4d80-838d-a71c2cbc6234" alt="Watch the Shotgun demo" width="720">
+  </a>
+</p>
+
+<h3>Prompt to Try</h3>
+
+```bash 
+Identify key modules, classes and the flows in the codebase. Document them in detail along with diagrams and code samples.
+```
 
 --- 
 
