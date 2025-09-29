@@ -14,14 +14,12 @@
 
 <br>
 
-### Spec-driven AI development that starts with research
-
+### Shotgun is a CLI that turns what you want to work on into _research → specs → plans → tasks → implementation_ with full codebase understanding and agents doing the heavy lifting.  
 <br>
+It produces clean, reusable artifacts and exports to the 
 
-  <p><em>Research what exists → Specify what's needed → Plan the approach → Break into tasks → Export to your AI code-gen tools.</em>
-<br>
-	  
-**Your specs keep AI agents on rails, building exactly what you need.</p>**
+[agents.md](https://github.com/openai/agents.md) 
+ecosystem to help you get the most out of code-gen tools and Agents.
 
 <br>
 
@@ -29,10 +27,6 @@
 pipx install shotgun-sh
 ```
 <img width="600" height="200" alt="Screenshot 2025-08-25 at 4 40 37 PM" src="https://github.com/user-attachments/assets/e9d15ea2-347e-4639-9e62-5d6a4edb47df" />
-
-  <p>
-    <small>30-second setup • Codebase aware • LLM agnostic • Runs locally</small>
-  </p>
 
 </div>
 
@@ -102,6 +96,17 @@ shotgun
 
 ---
 
+## What you get today
+
+- **Spec-driven workflow** across five Modes: `research → specify → plan → tasks → implement`
+- **Deterministic artifacts** you can version in Git
+- **Export to agents.md** so outputs plug into many code-generation tools (EXAMPLE TOOLS FROM AGENTS>MD SUPPORT LIST)
+- **Local-first CLI** with minimal setup
+
+> Shotgun sits *under* your codegen tools: it creates the structured inputs those tools need and keeps them consistent across the lifecycle.
+
+---
+
 ## Why Shotgun?
 
 ### 🎯 **Know your code. Decide faster.**
@@ -127,7 +132,7 @@ shotgun
 2. **Research What Exists** - Ask in plain English: "How do we handle auth?" Shotgun queries your code graph AND searches npm, GitHub, docs.
 3. **Choose Your Mode** - Research → Specify → Plan → Tasks → Export. Start anywhere. Each mode has specialized agents.
 4. **Review & Guide** - Watch agents work in your terminal. See what they find. Approve key decisions.
-5. **Export to Any Tool** - Export to Claude.md, Copilot, Cursor, Jira, Linear. Your specs include guardrails and context.
+5. **Export to Any Tool** - Export artifacts into agents.md format to drive downstream tools
 
 ---
 
