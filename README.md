@@ -40,44 +40,15 @@ pipx install shotgun-sh
 
 ## Table of Contents
 
+- [Quickstart](#quickstart)
 - [Why Shotgun?](#why-shotgun)
 - [How It Works](#how-it-works)
-- [Quickstart](#quickstart)
 - [Core Features](#core-features)
 - [Use Cases](#use-cases)
 - [Demo](#demo)
 - [Roadmap](#roadmap)
 - [FAQ](#faq)
 - [Contributing](#contributing)
-
----
-
-## Why Shotgun?
-
-### 🎯 **Know your code. Decide faster.**
-- Answers grounded in your actual repo via a live code graph—no guessing or stale context
-- Cut research time: query your codebase, web, GitHub, and docs in one place
-- Turn clarity into action with specs and plans that stay in sync with your project
-
-### 🚀 **From idea to shipped—without chaos.**
-- Five guided modes: Research → Spec → Plan → Tasks → Export
-- Structured, editable artifacts live in your repo for review and clean handoffs
-- Export specs/tasks to any AI tool or workflow and keep a single source of truth
-
-### 🛡️ **AI speed with production-grade safety.**
-- Codebase-aware guardrails, conflict detection, and architecture constraints keep work on track
-- Human-in-the-loop checkpoints and streamed progress give control when it matters
-- Telemetry and change tracking reduce rework and late-night incidents
-
----
-
-## How It Works
-
-1. **Install & Connect** - Point at your repo. Shotgun builds a live code graph.
-2. **Research What Exists** - Ask in plain English: "How do we handle auth?" Shotgun queries your code graph AND searches npm, GitHub, docs.
-3. **Choose Your Mode** - Research → Specify → Plan → Tasks → Export. Start anywhere. Each mode has specialized agents.
-4. **Review & Guide** - Watch agents work in your terminal. See what they find. Approve key decisions.
-5. **Export to Any Tool** - Export to Claude.md, Copilot, Cursor, Jira, Linear. Your specs include guardrails and context.
 
 ---
 
@@ -129,23 +100,34 @@ shotgun
 
 **Pro tip:** Run Shotgun in your IDE's terminal for the best experience.
 
+---
 
-### Uninstall:
+## Why Shotgun?
 
-```bash
-pipx uninstall shotgun-sh
-```
+### 🎯 **Know your code. Decide faster.**
+- Answers grounded in your actual repo via a live code graph—no guessing or stale context
+- Cut research time: query your codebase, web, GitHub, and docs in one place
+- Turn clarity into action with specs and plans that stay in sync with your project
 
-### Troubleshooting
+### 🚀 **From idea to shipped—without chaos.**
+- Five guided modes: Research → Spec → Plan → Tasks → Export
+- Structured, editable artifacts live in your repo for review and clean handoffs
+- Export specs/tasks to any AI tool or workflow and keep a single source of truth
 
-**Do you have the old version of Shotgun? (shotgun-alpha)**
+### 🛡️ **AI speed with production-grade safety.**
+- Codebase-aware guardrails, conflict detection, and architecture constraints keep work on track
+- Human-in-the-loop checkpoints and streamed progress give control when it matters
+- Telemetry and change tracking reduce rework and late-night incidents
 
-Uninstall the shotgun alpha (previous version) by doing the following:
+---
 
-```bash
-npm uninstall -g @proofs-io/shotgun --loglevel=error
-npm uninstall -g @proofs-io/shotgun-server --loglevel=error
-```
+## How It Works
+
+1. **Install & Connect** - Point at your repo. Shotgun builds a live code graph.
+2. **Research What Exists** - Ask in plain English: "How do we handle auth?" Shotgun queries your code graph AND searches npm, GitHub, docs.
+3. **Choose Your Mode** - Research → Specify → Plan → Tasks → Export. Start anywhere. Each mode has specialized agents.
+4. **Review & Guide** - Watch agents work in your terminal. See what they find. Approve key decisions.
+5. **Export to Any Tool** - Export to Claude.md, Copilot, Cursor, Jira, Linear. Your specs include guardrails and context.
 
 ---
 
@@ -218,6 +200,24 @@ A: Planned. We’ll publish compatibility notes and local provider integrations.
 <a href="https://www.producthunt.com/posts/shotgun"><strong>LINK</strong></a>.  
 An upvote, review or comment there helps us reach more builders and gather early feedback.</p>
 
+---
+
+### Uninstall:
+
+```bash
+pipx uninstall shotgun-sh
+```
+
+### Troubleshooting
+
+**Do you have the old version of Shotgun? (shotgun-alpha)**
+
+Uninstall the shotgun alpha (previous version) by doing the following:
+
+```bash
+npm uninstall -g @proofs-io/shotgun --loglevel=error
+npm uninstall -g @proofs-io/shotgun-server --loglevel=error
+```
 ---
 
 <div align="center">
