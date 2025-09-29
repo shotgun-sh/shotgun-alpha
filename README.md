@@ -136,6 +136,17 @@ shotgun
 pipx uninstall shotgun-sh
 ```
 
+### Troubleshooting
+
+**Do you have the old version of Shotgun? (shotgun-alpha)**
+
+Uninstall the shotgun alpha (previous version) by doing the following:
+
+```bash
+npm uninstall -g @proofs-io/shotgun --loglevel=error
+npm uninstall -g @proofs-io/shotgun-server --loglevel=error
+```
+
 ---
 
 ## Core Features
