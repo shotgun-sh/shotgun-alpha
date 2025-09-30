@@ -12,13 +12,14 @@
 
 # SHOTGUN — Beta
 
-<br>
+<img width="600" height="200" alt="Screenshot 2025-08-25 at 4 40 37 PM" src="shotgun_logo.png" />
 
-### Shotgun is a CLI that turns what you want to work on into _research → specs → plans → tasks → implementation_ with full codebase understanding and agents doing the heavy lifting.  
-<br>
-It produces clean, reusable artifacts and exports to the 
+### Shotgun is a CLI that turns what you want to work on into _research → specs → plans → tasks → implementation_ with full codebase understanding and agents doing the heavy lifting.
 
-[agents.md](https://github.com/openai/agents.md) 
+<br>
+It produces clean, reusable artifacts and exports to the
+
+[agents.md](https://github.com/openai/agents.md)
 ecosystem to help you get the most out of code-gen tools and Agents.
 
 <br>
@@ -26,7 +27,6 @@ ecosystem to help you get the most out of code-gen tools and Agents.
 ```bash
 pipx install shotgun-sh
 ```
-<img width="600" height="200" alt="Screenshot 2025-08-25 at 4 40 37 PM" src="https://github.com/user-attachments/assets/e9d15ea2-347e-4639-9e62-5d6a4edb47df" />
 
 </div>
 
@@ -53,23 +53,28 @@ Shotgun is a Python-based CLI tool. We use `pipx` for clean, isolated installati
 ### Step 1: Install pipx (if you don't have it)
 
 #### macOS
+
 ```bash
 brew install pipx && pipx ensurepath
 ```
-*No Homebrew? [Install it here](https://brew.sh/)*
+
+_No Homebrew? [Install it here](https://brew.sh/)_
 
 #### Linux
+
 ```bash
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 ```
 
 #### Windows
+
 ```bash
 python -m pip install --user pipx
 python -m pipx ensurepath
 ```
-*Restart your terminal after installation*
+
+_Restart your terminal after installation_
 
 ### Step 2: Install Shotgun
 
@@ -88,6 +93,7 @@ shotgun
 ```
 
 **Shotgun will guide you through:**
+
 - Indexing your codebase into a searchable graph
 - Setting up your LLM provider (OpenAI, Anthropic, or Gemini)
 - Starting your first research session
@@ -103,23 +109,26 @@ shotgun
 - **Export to agents.md** so outputs plug into many code-generation tools (EXAMPLE TOOLS FROM AGENTS>MD SUPPORT LIST)
 - **Local-first CLI** with minimal setup
 
-> Shotgun sits *under* your codegen tools: it creates the structured inputs those tools need and keeps them consistent across the lifecycle.
+> Shotgun sits _under_ your codegen tools: it creates the structured inputs those tools need and keeps them consistent across the lifecycle.
 
 ---
 
 ## Why Shotgun?
 
 ### 🎯 **Know your code. Decide faster.**
+
 - Answers grounded in your actual repo via a live code graph—no guessing or stale context
 - Cut research time: query your codebase, web, GitHub, and docs in one place
 - Turn clarity into action with specs and plans that stay in sync with your project
 
 ### 🚀 **From idea to shipped—without chaos.**
+
 - Five guided modes: Research → Spec → Plan → Tasks → Export
 - Structured, editable artifacts live in your repo for review and clean handoffs
 - Export specs/tasks to any AI tool or workflow and keep a single source of truth
 
 ### 🛡️ **AI speed with production-grade safety.**
+
 - Codebase-aware guardrails, conflict detection, and architecture constraints keep work on track
 - Human-in-the-loop checkpoints and streamed progress give control when it matters
 - Telemetry and change tracking reduce rework and late-night incidents
@@ -139,12 +148,15 @@ shotgun
 ## Core Features
 
 ### 📊 **Complete Codebase Understanding**
+
 Before writing a single line, Shotgun reads all of it. Your patterns. Your dependencies. Your technical debt. Whether you're adding features, onboarding devs, planning migrations, or refactoring - Shotgun knows what you're working with.
 
 ### 🔄 **Five Modes. One Journey. Zero Gaps.**
+
 Research (what exists) → Specify (what to build) → Plan (how to build) → Tasks (break it down) → Export (to any tool). Not another chatbot. A complete workflow where each mode feeds the next.
 
 ### 📝 **Specs That Don't Die in Slack**
+
 Every research finding, every architectural decision, every "here's why we didn't use that library" - captured as markdown in your repo. Version controlled. Searchable.
 
 ---
@@ -158,9 +170,10 @@ Every research finding, every architectural decision, every "here's why we didn'
 - **📦 Migration** - Map the old, plan the new, track the delta. Break migration into safe stages
 
 ---
+
 <h2 id="demo">Demo</h2>
 
-**See Shotgun in action** 
+**See Shotgun in action**
 
 <p align="center">
   <a href="https://youtu.be/ex95q0uVkDk">
@@ -169,21 +182,25 @@ Every research finding, every architectural decision, every "here's why we didn'
 </p>
 
 **Give Shotgun a spin**
+
 ```bash
-Onboard me to this codebase. 
+Onboard me to this codebase.
 ```
 
 ---
+
 <h2 id="roadmap">Roadmap</h2>
 
 ### 🚧 Coming soon
+
 - [ ] Token usage display & spend tracking
-- [ ] Support for local LLMs 
-- [ ] Linear agents integration  
-- [ ] Attachments: add screenshots / PDFs / files to Shotgun  
-- [ ] Performance improvements (make Shotgun faster)  
+- [ ] Support for local LLMs
+- [ ] Linear agents integration
+- [ ] Attachments: add screenshots / PDFs / files to Shotgun
+- [ ] Performance improvements (make Shotgun faster)
 
 ---
+
 ## FAQ
 
 **Q: Does Shotgun collect any stats or data?**  
@@ -193,6 +210,7 @@ A: We only gather minimal, anonymous events (e.g., install, server start, tool c
 A: Planned. We’ll publish compatibility notes and local provider integrations.
 
 ---
+
 <h2 id="contributing">Contributing</h2>
 <p>Shotgun is in Beta — we’d love your feedback and support.</p>
 <ul>
@@ -223,6 +241,7 @@ Uninstall the shotgun alpha (previous version) by doing the following:
 npm uninstall -g @proofs-io/shotgun --loglevel=error
 npm uninstall -g @proofs-io/shotgun-server --loglevel=error
 ```
+
 ---
 
 <div align="center">
