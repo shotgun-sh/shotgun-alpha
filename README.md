@@ -176,8 +176,8 @@ Every research finding, every architectural decision, every "here's why we didn'
 **See Shotgun in action**
 
 <p align="center">
-  <a href="https://youtu.be/ex95q0uVkDk">
-    <img src="https://github.com/user-attachments/assets/ed7fe107-f60d-4f8f-aada-ab21b6008fbb" alt="Watch the Shotgun demo" width="720">
+  <a href="https://youtu.be/eEUaSaQJBPg">
+    <img src="https://github.com/user-attachments/assets/da115b12-7ca5-4bbc-ae20-3684f971b567" alt="Watch the Shotgun demo" width="720" height="450">
   </a>
 </p>
 
