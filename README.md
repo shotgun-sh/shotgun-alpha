@@ -50,7 +50,13 @@ pipx install shotgun-sh
 
 Shotgun is a Python-based CLI tool. We use `pipx` for clean, isolated installation.
 
+
+
 ### Step 1: Install pipx (if you don't have it)
+
+> [!WARNING]
+> If you tried out an alpha version of shotgun, make sure to uninstall it:\
+> `npm uninstall -g @proofs-io/shotgun @proofs-io/shotgun-server`
 
 #### macOS
 
